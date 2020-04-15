@@ -1,0 +1,28 @@
+<!-- <app-header titulo="APP Ionic">  
+</app-header> -->
+
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+      <!-- <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button> -->
+
+   
+        <ion-menu-button color="primary"></ion-menu-button>
+    
+
+    </ion-buttons>
+    <ion-title color="primary">Início</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let c of componentes | async" [routerLink]="c.link">
+      <ion-icon [name]="c.icone" slot="start" color="primary"></ion-icon>
+      <ion-label>{{c.nome}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

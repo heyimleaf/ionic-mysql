@@ -1,5 +1,6 @@
 {
-  "name": "crud",
+  "name": "componentes",
   "integrations": {},
-  "type": "angular"
+  "type": "angular",
+  "id": "83f0c02c"
 }
