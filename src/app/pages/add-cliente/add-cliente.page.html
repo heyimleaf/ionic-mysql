@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="Cliente()">
+      <ion-button color="primary">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Adicionar Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label type="tel" position="floating">Telefone</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-button expand="block" color="success" (click)="cadastrar()">
+    <ion-icon slot="end" name="chevron-forward-circle-outline"></ion-icon>
+    Salvar
+  </ion-button>
+  
+</ion-content>

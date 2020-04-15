@@ -11,6 +11,18 @@ const routes: Routes = [
     path: 'list',
     loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
   },
+  {
+    path: 'add-cliente',
+    loadChildren: () => import('./pages/add-cliente/add-cliente.module').then( m => m.AddClientePageModule)
+  },
+  {
+    path: 'mostrar-cliente',
+    loadChildren: () => import('./pages/mostrar-cliente/mostrar-cliente.module').then( m => m.MostrarClientePageModule)
+  },
+  {
+    path: 'clientes',
+    loadChildren: () => import('./pages/clientes/clientes.module').then( m => m.ClientesPageModule)
+  },
 ];
 
 @NgModule({

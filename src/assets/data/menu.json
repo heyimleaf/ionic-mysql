@@ -1,8 +1,18 @@
 [
+  {
+    "icone": "home",
+    "nome": "Home",
+    "link": "/inicio"
+  },
     {
       "icone": "list",
       "nome": "Lista",
       "link": "/list"
+    },
+    {
+      "icone": "people-circle-outline",
+      "nome": "Clientes",
+      "link": "/clientes"
     }
   
 
