@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddClientePage implements OnInit {
 
+  nome: string = "";
+  telefone: string = "";
+  email: string = "";
+
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -18,6 +22,13 @@ export class AddClientePage implements OnInit {
   }
 
   Cadastrar(){
-
+      return new Promise(resolve => {
+        let dados = {
+          aqsi: 'add',
+          nome: this.nome,
+          telefone: this.telefone,
+          email: this.email
+        }
+      });
   }
 }
