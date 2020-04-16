@@ -9,7 +9,7 @@ export class PostProvider {
 
     constructor(private http: HttpClient) { }
 
-    inserirApi(dados: any) {
+    inserirApi(dados: any)  {
         return new Promise((resolve, reject) => {
             let url = this.server;
             this.http.post(url, dados)
