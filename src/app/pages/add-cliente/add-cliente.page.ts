@@ -1,5 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { PostProvider } from 'src/providers/post-provider';
+
 
 @Component({
   selector: 'app-add-cliente',
@@ -12,23 +14,29 @@ export class AddClientePage implements OnInit {
   telefone: string = "";
   email: string = "";
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private provider: PostProvider) { }
 
   ngOnInit() {
   }
 
-  Cliente(){
+  Cliente() {
     this.router.navigate(['/clientes'])
   }
 
-  Cadastrar(){
-      return new Promise(resolve => {
-        let dados = {
-          aqsi: 'add',
-          nome: this.nome,
-          telefone: this.telefone,
-          email: this.email
-        }
-      });
+  Cadastrar() {
+    return new Promise(resolve => {
+      let dados = {
+        request: 'add',
+        nome: this.nome,
+        telefone: this.telefone,
+        email: this.email
+      };
+      this.provider.inserirApi(dados).then(data => {
+
+        this.router.navigate(['/clientes']);
+        console.log('rodando');
+      }
+      );
+    });
   }
 }

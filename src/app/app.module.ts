@@ -1,4 +1,3 @@
-import { PostProvider } from './../providers/post-provider';
 import { ComponentsModule } from './components/components.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PostProvider } from 'src/providers/post-provider';
 
 
 @NgModule({
@@ -20,11 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ComponentsModule,
     HttpClientModule,
-    PostProvider
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    PostProvider,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

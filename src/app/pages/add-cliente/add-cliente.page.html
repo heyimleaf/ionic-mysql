@@ -13,20 +13,20 @@
 <ion-content class="ion-padding">
   <ion-item>
     <ion-label position="floating">Nome</ion-label>
-    <ion-input [(ngModel)]="txtNome"></ion-input>
+    <ion-input [(ngModel)]="nome"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label type="tel" position="floating">Telefone</ion-label>
-    <ion-input [(ngModel)]="txtTelefone"></ion-input>
+    <ion-input [(ngModel)]="telefone"></ion-input>
   </ion-item>
   
   <ion-item>
     <ion-label position="floating">E-mail</ion-label>
-    <ion-input [(ngModel)]="txtEmail"></ion-input>
+    <ion-input [(ngModel)]="email"></ion-input>
   </ion-item>
   
-  <ion-button expand="block" color="success" (click)="cadastrar()">
+  <ion-button expand="block" color="success" (click)="Cadastrar()">
     <ion-icon slot="end" name="chevron-forward-circle-outline"></ion-icon>
     Salvar
   </ion-button>

@@ -1,15 +1,13 @@
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HTTP } from '@ionic-native/http/ngx';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class PostProvider {
-    server: string = "http://localhost/api/";
+    server: string = "http://localhost/api/inserirCliente.php";
 
-    constructor(private http: HttpClient) {
-
-    }
+    constructor(private http: HttpClient) { }
 
     inserirApi(dados: any) {
         return new Promise((resolve, reject) => {
