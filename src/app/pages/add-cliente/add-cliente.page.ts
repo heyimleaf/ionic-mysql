@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { PostProvider } from 'src/providers/post-provider';
+import { ToastController } from '@ionic/angular';
 
 
 @Component({
@@ -14,7 +15,17 @@ export class AddClientePage implements OnInit {
   telefone: string = "";
   email: string = "";
 
-  constructor(private router: Router, private provider: PostProvider) { }
+  constructor(private router: Router, private provider: PostProvider, 
+              public toastController: ToastController) { }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Salvo com sucesso.',
+      duration: 2000,
+      color: "success"
+    });
+    toast.present();
+  }
 
   ngOnInit() {
   }
@@ -31,12 +42,11 @@ export class AddClientePage implements OnInit {
         telefone: this.telefone,
         email: this.email
       };
-      this.provider.inserirApi(dados).then(data => {
-
-        this.router.navigate(['/clientes']);
-        console.log('rodando');
-      }
-      );
+      this.provider.inserirApi(dados, 'inserirCliente.php')
+        .subscribe(data =>{
+            this.router.navigate(['/clientes']);
+            this.presentToast();
+        });
     });
   }
 }
