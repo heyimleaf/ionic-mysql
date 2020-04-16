@@ -31,12 +31,11 @@ export class AddClientePage implements OnInit {
         telefone: this.telefone,
         email: this.email
       };
-      this.provider.inserirApi(dados).then(data => {
-
+      this.provider.inserirApi(dados, 'inserirCliente.php').subscribe(data =>{
         this.router.navigate(['/clientes']);
-        console.log('rodando');
-      }
-      );
+      });
+     
+   
     });
   }
 }
