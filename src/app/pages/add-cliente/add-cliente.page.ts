@@ -43,20 +43,6 @@ export class AddClientePage implements OnInit {
     toast.present();
   }
 
-<<<<<<< HEAD
-=======
-  constructor(private router: Router, private provider: PostProvider, 
-              public toastController: ToastController) { }
-
-  async presentToast() {
-    const toast = await this.toastController.create({
-      message: 'Salvo com sucesso.',
-      duration: 2000,
-      color: "success"
-    });
-    toast.present();
-  }
->>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
 
   ngOnInit() {
     this.actRoute.params.subscribe(( data: any ) =>{
@@ -85,7 +71,7 @@ export class AddClientePage implements OnInit {
             this.router.navigate(['/clientes']);
             this.presentToast();
         });
-<<<<<<< HEAD
+
     });
   }
 
@@ -103,8 +89,7 @@ export class AddClientePage implements OnInit {
             this.router.navigate(['/clientes']);
             this.presentToastEditar();
         });
-=======
->>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
+
     });
   }
 }

@@ -27,14 +27,12 @@ const routes: Routes = [
     path: 'add-cliente/:id/:nome/:telefone/:email',
     loadChildren: () => import('./pages/add-cliente/add-cliente.module').then( m => m.AddClientePageModule)
   },
-<<<<<<< HEAD
+
   {
     path: 'mostrar-cliente/:id/:nome/:telefone/:email',
     loadChildren: () => import('./pages/mostrar-cliente/mostrar-cliente.module').then( m => m.MostrarClientePageModule)
   },
-=======
-  
->>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
+
 ];
 
 @NgModule({

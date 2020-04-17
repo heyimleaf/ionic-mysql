@@ -17,8 +17,6 @@
 
 <ion-content class="ion-padding">
 
-<<<<<<< HEAD
-
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
       pullingIcon="arrow-dropdown"
@@ -29,21 +27,17 @@
   </ion-refresher>
   
 
-=======
->>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
+
   <ion-list>
     <!-- Sliding item with text options on both sides -->
     <ion-item-sliding *ngFor="let cliente of clientes">
       <ion-item-options side="start">
-<<<<<<< HEAD
-        <ion-item-option (click)="editar(cliente.id, cliente.nome, cliente.telefone, cliente.email)">Editar</ion-item-option>
 
-=======
         <ion-item-option (click)="editar(cliente.id,
                                          cliente.nome,
                                          cliente.telefone,
                                          cliente.email)">Editar</ion-item-option>
->>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
+
       </ion-item-options>
   
       <ion-item>
@@ -51,10 +45,9 @@
       </ion-item>
   
       <ion-item-options side="end">
-<<<<<<< HEAD
+
         <ion-item-option (click)="mostrar(cliente.id, cliente.nome, cliente.telefone, cliente.email)" color="secondary">Mostrar</ion-item-option>
-=======
->>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
+
         <ion-item-option (click)="excluir(cliente.id)" color="danger">Excluir</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>

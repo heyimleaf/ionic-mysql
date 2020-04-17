@@ -6,7 +6,8 @@
         <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Adicionar Cliente</ion-title>
+    <ion-title *ngIf="!id">Adicionar Cliente</ion-title>
+    <ion-title *ngIf="id>=1">Editar Cliente</ion-title>
   </ion-toolbar>
 </ion-header>
 
