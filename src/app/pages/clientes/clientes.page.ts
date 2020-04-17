@@ -20,6 +20,8 @@ export class ClientesPage implements OnInit {
     this.Carregar();
   }
 
+  
+
   ngOnInit() {
    
   }

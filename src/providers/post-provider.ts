@@ -10,9 +10,10 @@ export class PostProvider {
     constructor(private http: HttpClient) { }
 
     inserirApi(dados: any, api: string)  {
-       
+
+           
         const httpOptions = {
-            headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+            headers: new HttpHeaders({'Content-Type': 'application/json'})
         };
 
         let url = this.server + api;

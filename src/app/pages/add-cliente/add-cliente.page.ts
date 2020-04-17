@@ -17,10 +17,12 @@ export class AddClientePage implements OnInit {
   id: number;
  
 
+
   constructor(private router: Router,
               private provider: PostProvider, 
               public toastController: ToastController,
               private actRoute: ActivatedRoute) { }
+
 
   async presentToast() {
     const toast = await this.toastController.create({
@@ -31,6 +33,7 @@ export class AddClientePage implements OnInit {
     toast.present();
   }
 
+
   async presentToastEditar() {
     const toast = await this.toastController.create({
       message: 'Editado com sucesso.',
@@ -39,6 +42,7 @@ export class AddClientePage implements OnInit {
     });
     toast.present();
   }
+
 
   ngOnInit() {
     this.actRoute.params.subscribe(( data: any ) =>{
