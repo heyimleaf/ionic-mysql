@@ -14,12 +14,14 @@ export class ClientesPage implements OnInit {
 
 
   constructor(private router: Router, private provider: PostProvider) { }
-
-
-  ngOnInit() {
+  ionViewWillEnter(){
     this.clientes = [];
     this.start = 0;
     this.Carregar();
+  }
+
+  ngOnInit() {
+   
   }
 
   addCliente(){
@@ -41,4 +43,26 @@ export class ClientesPage implements OnInit {
       });
     });
   }
+
+  editar(id, nome, telefone, email){
+    this.router.navigate(['/add-cliente/' + id + '/' + nome + '/' + telefone + '/' + email]);
+
+   }
+   excluir(id){
+
+    let dados = {
+      request : 'excluir',
+      id : id
+    };
+
+    this.provider.inserirApi(dados, 'inserirCliente.php').subscribe(data => {
+       this.ngOnInit();
+    });
+
+   }
+
+   mostrar(id, nome, telefone, email){
+    this.router.navigate(['/mostrar-cliente/' + id + '/' + nome + '/' + telefone + '/' + email]);
+
+   }
 }

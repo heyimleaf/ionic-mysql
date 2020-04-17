@@ -1,9 +1,24 @@
 <ion-header>
+
   <ion-toolbar>
-    <ion-title>mostrarCliente</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>Detalhes do Cliente</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+  <ion-card-header>
+    <ion-card-subtitle>Cliente:</ion-card-subtitle>
+    <ion-card-title>{{ nome }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Telefone : {{telefone}} <br>
+    E-mail: {{ email }}
+  </ion-card-content>
 
 </ion-content>

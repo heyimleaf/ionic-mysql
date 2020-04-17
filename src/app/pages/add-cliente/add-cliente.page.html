@@ -26,9 +26,15 @@
     <ion-input [(ngModel)]="email"></ion-input>
   </ion-item>
   
-  <ion-button expand="block" color="success" (click)="Cadastrar()">
+  <ion-button *ngIf="!id" expand="block" color="success" (click)="Cadastrar()">
     <ion-icon slot="end" name="chevron-forward-circle-outline"></ion-icon>
     Salvar
   </ion-button>
+
+  <ion-button *ngIf="id>=1" expand="block" color="primary" (click)="Editar()">
+    <ion-icon slot="end" name="chevron-forward-circle-outline"></ion-icon>
+    Editar
+  </ion-button>
+  
   
 </ion-content>
