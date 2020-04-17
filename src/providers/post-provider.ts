@@ -1,7 +1,10 @@
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
 
 @Injectable()
 export class PostProvider {
@@ -10,8 +13,11 @@ export class PostProvider {
     constructor(private http: HttpClient) { }
 
     inserirApi(dados: any, api: string)  {
+<<<<<<< HEAD
 
            
+=======
+>>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
         const httpOptions = {
             headers: new HttpHeaders({'Content-Type': 'application/json'})
         };

@@ -1,5 +1,9 @@
 import { PostProvider } from 'src/providers/post-provider';
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
+=======
+import { Component, OnInit, Provider } from '@angular/core';
+>>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +16,7 @@ export class ClientesPage implements OnInit {
   limit : number = 10;
   start : number = 0;
 
+<<<<<<< HEAD
 
   constructor(private router: Router, private provider: PostProvider) { }
   ionViewWillEnter(){
@@ -24,20 +29,36 @@ export class ClientesPage implements OnInit {
 
   ngOnInit() {
    
+=======
+  constructor(private router: Router, private provider: PostProvider) { }
+
+  ngOnInit() {
+    this.clientes = [];
+    this.start = 0;
+    this.Carregar();
+>>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
   }
 
   addCliente(){
     this.router.navigate(['/add-cliente']);
   }
 
+<<<<<<< HEAD
   Carregar(){
     return new Promise(resolve => {
       let dados = {
         request : 'getdata',
+=======
+  Carregar() {
+    return new Promise(resolve => {
+      let dados = {
+        request: 'getdata',
+>>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
         limit : this.limit,
         start : this.start
       };
       this.provider.inserirApi(dados, 'inserirCliente.php').subscribe(data => {
+<<<<<<< HEAD
           for( let cliente of data['result']){
             this.clientes.push(cliente);
           }
@@ -67,4 +88,13 @@ export class ClientesPage implements OnInit {
     this.router.navigate(['/mostrar-cliente/' + id + '/' + nome + '/' + telefone + '/' + email]);
 
    }
+=======
+        for( let cliente of data['result']){
+          this.clientes.push(cliente)
+        }
+        resolve(true);
+      });
+    });
+  }
+>>>>>>> 80c87e1b47ae7045cca3c54cd109f64032e5b8fe
 }
