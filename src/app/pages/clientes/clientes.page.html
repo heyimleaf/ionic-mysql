@@ -15,14 +15,27 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-row>
+  <ion-col size="10">
+    <ion-input [(ngModel)]="nome" type="search" placeholder="Buscar"></ion-input>
+  </ion-col>
+  <ion-col>
+      <ion-buttons (click)="Buscar()">
+        <ion-button>
+          <ion-icon slot="end" name="search"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-col>
+</ion-row>
+
+
+
 <ion-content class="ion-padding">
 
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
       pullingIcon="arrow-dropdown"
-      pullingText="Pull to refresh"
-      refreshingSpinner="circles"
-      refreshingText="Refreshing...">
+      refreshingSpinner="circles">
     </ion-refresher-content>
   </ion-refresher>
   
@@ -53,5 +66,10 @@
     </ion-item-sliding>
     </ion-list>
  
+    <ion-infinite-scroll (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingText="Carregando...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 
 </ion-content>
