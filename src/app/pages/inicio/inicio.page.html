@@ -7,7 +7,11 @@
     <ion-buttons slot="end">
         <ion-menu-button color="primary"></ion-menu-button>
     </ion-buttons>
-    <ion-title color="primary">Início</ion-title>
+    <ion-title color="primary">Bem-vindo {{ usuario }}</ion-title>
+    
+    <ion-button slot="start" fill="outline" (click)="logout()">
+      <ion-icon slot="end" name="log-out"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
